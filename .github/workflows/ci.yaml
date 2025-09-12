@@ -1,6 +1,6 @@
-name: CI Pipeline 
+name: CI Pipeline
 
-on: [push,pull_request]
+on: [push, pull_request]
 
 jobs:
   build-and-test:
@@ -14,7 +14,8 @@ jobs:
         with:
           node-version: 18
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Run tests
         run: npm test
-          
-
